@@ -1,0 +1,36 @@
+.portfolio{
+    overflow: hidden;
+}
+.portfolio .projects{
+    display: flex;
+    animation: scroll 35s linear infinite;
+    -webkit-animation: scroll 35s linear infinite;
+    width: calc(505px * 8);
+}
+.portfolio .projects:hover{
+    animation-play-state: paused;
+}
+.portfolio .projects .slide{
+    margin: 20px;
+    width: 505px;
+    height: 293px;
+    border-radius: 40px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0.04) 100%);
+    box-shadow: 0 4px 24px -1px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(20px);
+}
+@keyframes scroll{
+    0%{
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(calc(-505px*4));
+        -webkit-transform: translateX(calc(-505px*4));
+    }
+}
+
+.main .portfolio .projects .slide img{
+height: 290px;
+}
+
